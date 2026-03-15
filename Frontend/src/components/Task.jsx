@@ -7,7 +7,7 @@ const Task = ({ task }) => {
     const { dispatch } = useContext(TodoContext) // using use context and making use of useReducer hook
 
     const handleClick = async () => {
-        const response = await fetch("http://localhost:3000/todos" + `/${task._id}`, {
+        const response = await fetch("https://todo-list-hf1o.onrender.com/todos" + `/${task._id}`, {
             method: "DELETE"
         })
         const data = await response.json()

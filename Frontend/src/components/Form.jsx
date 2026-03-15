@@ -16,7 +16,7 @@ const Form = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const response = await fetch('http://localhost:3000/todos', {
+        const response = await fetch('https://todo-list-hf1o.onrender.com/todos', {
             method: 'POST',
             body: JSON.stringify({ task: text }), // since backend expects obj. instead of string, wrap text inside braces
             headers: {

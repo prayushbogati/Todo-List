@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const fetchTodos = async () => {
-      const response = await fetch('http://localhost:3000/todos')
+      const response = await fetch('https://todo-list-hf1o.onrender.com/todos')
       const data = await response.json()
       console.log(data);
 
