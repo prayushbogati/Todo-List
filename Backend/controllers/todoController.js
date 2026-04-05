@@ -7,7 +7,7 @@ const getTodos = async (req, res) => {
     try {
         const items = await todos.find({}).sort({ createdAt: -1 })
         if (items.length === 0) {
-            return res.status(404).json({ message: "No items found!" })
+            return res.status(204).json({ message: "No items found!" })
         }
         res.status(200).json(items)
 
